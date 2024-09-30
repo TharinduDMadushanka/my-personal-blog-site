@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Background from './Components/Background/Background';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
+import Category from './Components/Category/Category';
 
 const App = () => {
 
@@ -34,7 +35,7 @@ const App = () => {
         playStatus={playStatus}
         setPlayStatus={setPlayStatus}
       />
-      
+      <Category/>
     </div>
   )
 }

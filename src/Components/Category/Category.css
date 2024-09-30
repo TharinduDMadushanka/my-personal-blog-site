@@ -1,0 +1,77 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+  }
+  
+  .cat-title h1 {
+    padding: 0px 30px;
+    font-size: 70px;
+    font-weight: 600;
+    color: hsla(0, 37%, 92%, 0.853);
+  }
+  
+  .cat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .cat-item {
+    position: relative;
+    width: 400px;
+    height: 260px;
+  }
+  
+  .cat-container img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s, border 0.3s;
+    cursor: pointer;
+  }
+  
+  .cat-container img:hover {
+    transform: scale(1.10);
+    border: 4px solid #214598;
+    border-radius: 10px;
+  }
+  
+  .cat-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: 600;
+    color: hsla(0, 37%, 92%, 0.853);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* For better visibility */
+  }
+  
+  .cat-item:hover .cat-name {
+    opacity: 1; /* Show the name on hover */
+  }
+  
+  .cat-showmore{
+    display: flex;
+    gap: 15px;
+    border-radius: 50px;
+    border: 2px solid hsla(0, 37%, 92%, 0.853);
+    color: hsla(0, 37%, 92%, 0.853);
+    padding: 20px 50px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    transition: 0.6s;
+    cursor: pointer;
+  }
+
+  .cat-showmore:hover{
+    gap: 30px;
+    transition: 0.6s;
+  }
