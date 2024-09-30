@@ -3,6 +3,7 @@ import Background from './Components/Background/Background';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import Category from './Components/Category/Category';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
 
@@ -36,6 +37,7 @@ const App = () => {
         setPlayStatus={setPlayStatus}
       />
       <Category/>
+      <Footer/>
     </div>
   )
 }
