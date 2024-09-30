@@ -17,7 +17,15 @@
     align-items: center;
     list-style: none;
     font-size: 18px;
-    gap: 90px;
+    gap: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.nav-menu li:hover{
+    transform: scale(1.1);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .nav-contact{
