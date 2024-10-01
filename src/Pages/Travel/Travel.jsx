@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import img1 from '../../assets/pages/Travel/img1.jpg';
 import img2 from '../../assets/pages/Travel/img2.jpg';
 import img3 from '../../assets/pages/Travel/img3.jpg';
+import galle from '../../assets/pages/Travel/galle.png';
 import './Travel.css';
 import travel_data from '../../data/Travel/Travel_data';
 import { Modal } from 'react-bootstrap';
@@ -93,7 +94,7 @@ const Travel = () => {
             <h2 style={{color:"black"}}>{selectedPlace.t_name}</h2>
             <img src={selectedPlace.t_img} className="img-fluid mb-4" alt={selectedPlace.t_name} />
             <p style={{color:"black"}}>{selectedPlace.t_desc}</p>
-            <p style={{color:"black"}}>More detailed information about the travel destination goes here...</p>
+            <p style={{color:"black"}}>{selectedPlace.t_more}</p>
           </Modal.Body>
         </Modal>
       )}
