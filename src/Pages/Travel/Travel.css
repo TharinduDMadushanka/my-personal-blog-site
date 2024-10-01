@@ -1,0 +1,28 @@
+/* Travel.css */
+.travel {
+    position: relative;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    z-index: 10; /* Ensure it's on top of the carousel */
+  }
+  
+  .carousel-inner img {
+    height: 100vh; /* Set full viewport height for carousel images */
+    object-fit: cover; /* Ensure the image covers the carousel area */
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .carousel-indicators button {
+    background-color: #fff; /* White color for indicators */
+  }
+  

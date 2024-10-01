@@ -14,7 +14,12 @@
     -webkit-text-fill-color: transparent;
     font-size: 50px;
     font-weight: 500;
-    margin-top: -350px;
+    margin-top: -270px;
+}
+
+.hero-text h1{
+    font-size: 80px;
+    font-weight: 700;
 }
 
 .hero-explore {
@@ -27,11 +32,12 @@
     border-radius: 60px;
     background-color: hsla(0, 0%, 63%, 0.41);
     cursor: pointer;
-    margin-bottom: 20px; /* Space between bottom of the page and the explore section */
+    margin-bottom: -40px; /* Space between bottom of the page and the explore section */
 }
 
 .hero-explore p {
     color: white;
     font-size: 20px;
     font-weight: 500;
+    margin-top: 20px;
 }

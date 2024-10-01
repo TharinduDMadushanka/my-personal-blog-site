@@ -1,23 +1,25 @@
-import './Navbar.css'
+import { useNavigate } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
+  const navigate = useNavigate(); // Use navigate hook
+
   return (
     <div className='nav'>
-
       <div className="nav-logo">TDM</div>
 
       <ul className="nav-menu">
-        <li>Home</li>
+        {/* Wrapping navigation call inside an anonymous function */}
+        <li onClick={() => navigate('/')}>Home</li>
         <li>Technology</li>
         <li>Science</li>
-        <li>Travel</li>
+        <li onClick={() => navigate('/travel')}>Travel</li>
         <li>Entertainment</li>
         <li>About me</li>
         <li className='nav-contact'>Contact</li>
       </ul>
-      
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
