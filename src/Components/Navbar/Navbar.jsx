@@ -11,7 +11,7 @@ const Navbar = () => {
       <ul className="nav-menu">
         {/* Wrapping navigation call inside an anonymous function */}
         <li onClick={() => navigate('/')}>Home</li>
-        <li>Technology</li>
+        <li onClick={()=> navigate('/tech')}>Technology</li>
         <li>Science</li>
         <li onClick={() => navigate('/travel')}>Travel</li>
         <li>Entertainment</li>

@@ -1,0 +1,11 @@
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .modal-body {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  

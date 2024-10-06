@@ -1,4 +1,4 @@
-import img1 from '../../assets/pages/Travel/img1.jpg';
+import img1 from '../../assets/pages/Travel/galle.png';
 
 const travel_data = [
   {

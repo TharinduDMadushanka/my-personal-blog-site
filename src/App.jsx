@@ -7,6 +7,7 @@ import Category from './Components/Category/Category';
 import Footer from './Components/Footer/Footer';
 import Travel from './Pages/Travel/Travel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Tech from './Pages/Tech/Tech';
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
         
         {/* Travel Route */}
         <Route path="/travel" element={<Travel />} />
+        <Route path="/tech" element={<Tech />} />
       </Routes>
     </BrowserRouter>
   );
