@@ -28,6 +28,10 @@
 
 .travel-blog img{
   cursor: pointer;
+  
+}
+
+.travel-blog .card{
   transition: 0.5s;
 }
 
@@ -35,4 +39,8 @@
   transform: scale(1.05);
   border: 2px solid;
   border-color: blue;
+}
+
+.model-body p{
+  text-align: justify;
 }

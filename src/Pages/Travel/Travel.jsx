@@ -90,10 +90,10 @@ const Travel = () => {
             <Modal.Title>{selectedPlace.t_name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h2 style={{color:"black"}}>{selectedPlace.t_name}</h2>
+            {/* <h2 style={{color:"White"}}>{selectedPlace.t_name}</h2> */}
             <img src={selectedPlace.t_img} className="img-fluid mb-4" alt={selectedPlace.t_name} />
-            <p style={{color:"black"}}>{selectedPlace.t_desc}</p>
-            <p style={{color:"black"}}>{selectedPlace.t_more}</p>
+            <p style={{color:"white"}}>{selectedPlace.t_desc}</p>
+            <p style={{color:"white", fontSize:"18px", textAlign:"justify"}}>{selectedPlace.t_more}</p>
           </Modal.Body>
         </Modal>
       )}
