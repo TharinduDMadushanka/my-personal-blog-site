@@ -82,6 +82,12 @@
 .footer-icons img{
     width: 30px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-icons img:hover{
+    transform: scale(1.1);
+    transform: translateY(-20%);
 }
 
 .copyright-text{
