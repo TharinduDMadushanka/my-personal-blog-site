@@ -6,7 +6,9 @@ import bg3 from '../../assets/pages/Tech/tech-bg4.jpg';
 import Navbar from '../../Components/Navbar/Navbar';
 import tech_data from '../../data/Tech/tech_data';
 import { Modal } from 'react-bootstrap';
-import bg_video from '../../assets/pages/Tech/bg.mp4'
+import video2 from '../../assets/pages/Tech/bg.mp4'
+import ReactMarkdown from 'react-markdown';
+
 
 const Tech = () => {
   const [selectedPlace, setSelectedPlace] = useState(null);
@@ -26,7 +28,7 @@ const Tech = () => {
       <Navbar />
 
       <video className='background' autoPlay loop muted>
-        <source src={bg_video} type='video/mp4' />
+        <source src={video2} type='video/mp4' />
       </video>
 
       {/* Technology Blog Section */}
@@ -48,16 +50,18 @@ const Tech = () => {
 
       {/* Modal for Detailed Information */}
       {selectedPlace && (
-        <Modal show={true} onHide={handleCloseModal} size="lg" centered>
+        <Modal show={true} onHide={handleCloseModal} size="xl" centered>
           <Modal.Header closeButton>
             <Modal.Title>{selectedPlace.t_name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h2 style={{ color: "black" }}>{selectedPlace.t_name}</h2>
+            <h2 style={{ color: "#fff" }}>{selectedPlace.t_name}</h2>
             <img src={selectedPlace.t_img} className="img-fluid mb-4" alt={selectedPlace.t_name} />
-            <p style={{ color: "black" }}>{selectedPlace.t_desc}</p>
-            <p style={{ color: "black" }}>{selectedPlace.t_more}</p>
-          </Modal.Body>
+            <p>{selectedPlace.t_desc}</p>
+
+            {/* Use ReactMarkdown to properly render the markdown-style content */}
+            <ReactMarkdown>{selectedPlace.t_more}</ReactMarkdown>
+        </Modal.Body>
         </Modal>
       )}
     </div>

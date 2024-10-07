@@ -1,58 +1,59 @@
+.modal-body {
+  color: white; /* Set the body text color to white */
+  background-color: rgba(57, 55, 55, 0.777); /* Optional: Set a darker background color for contrast */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.modal-body h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 400px;
+  color: #fff; /* Ensure heading color is white */
+}
+
+.modal-body p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #fff; /* Ensure paragraph text is white */
+}
+
 .modal-body img {
-    width: 100%;
-    height: auto;
-  }
+  max-width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+.modal-body ul,
+.modal-body ol {
+  margin-left: 2rem;
+  color: #fff; /* Ensure list text is white */
+}
+
+/* Optional: Style the modal background */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.647); /* Set modal background color */
+  border-radius: 8px; /* Add some border radius */
+}
+
+/* Optional: Style the modal header */
+.modal-header {
+  border-bottom: none; /* Remove bottom border */
+  background-color: #555; /* Set a background color for the header */
+  color: white; /* Set header text color to white */
+}
+
+.tech-blog{
+  padding-top: 80px;
   
-  .modal-body {
-    max-height: 80vh;
-    overflow-y: auto;
-    background-color: hsla(0, 0%, 67%, 0.448);
-    text-align: justify;
-  }
-
-  .modal-body img{
-    border-radius: 6px;
-    max-width: 640px;
-    margin-left: 60px;
-    max-height: 400px;
-  }
-  
-  .tech-blog{
-    padding: 80px 30px;
-    
-  }
-
-  .tech-blog .card{
-    transition: 0.5s;
-    cursor: pointer;
-  }
-
-  .tech-blog .card:hover{
-    border: 3px solid hsla(240, 100%, 50%, 0.34);
-    transform: scale(1.05);
-  }
-
-  .background{
-    width: 100%;
-    height: 100vh;
-    float: left;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: none;
-    position: fixed;
-    object-fit: cover;
-    z-index: -1;
 }
 
-@keyframes fadeIn{
-    from {opacity: 0;}
-    to {opacity: 1;}
+.tech-blog .card{
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.fade-in{
-    animation: fadeIn 500ms ease-in-out;
+.tech-blog .card:hover{
+  transform: scale(1.1);
+  border: 2px solid hsla(240, 100%, 50%, 0.411);
 }
-
-.modal-body
