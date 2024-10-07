@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
-import img1 from '../../assets/pages/Travel/img1.jpg';
-import img2 from '../../assets/pages/Travel/img2.jpg';
-import img3 from '../../assets/pages/Travel/img3.jpg';
-import galle from '../../assets/pages/Travel/galle.png';
+import sl1 from '../../assets/pages/Travel/sl1.jpg';
+import sl2 from '../../assets/pages/Travel/sl2.jpg';
+import sl3 from '../../assets/pages/Travel/sl3.jpg';
 import './Travel.css';
 import travel_data from '../../data/Travel/Travel_data';
 import { Modal } from 'react-bootstrap';
@@ -35,21 +34,21 @@ const Travel = () => {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={img1} className="d-block w-100" alt="First Slide" />
+              <img src={sl1} className="d-block w-100" alt="First Slide" />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Explore Exotic Destinations</h5>
                 <p>Discover the beauty of untouched landscapes and hidden gems around the world. Let your adventure begin.</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img src={img2} className="d-block w-100" alt="Second Slide" />
+              <img src={sl2} className="d-block w-100" alt="Second Slide" />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Unforgettable Experiences</h5>
                 <p>From cultural festivals to outdoor adventures, immerse yourself in unique travel experiences that will last a lifetime.</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img src={img3} className="d-block w-100" alt="Third Slide" />
+              <img src={sl3} className="d-block w-100" alt="Third Slide" />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Plan Your Next Journey</h5>
                 <p>Whether it's a spontaneous getaway or a well-planned holiday, get ready to explore new horizons with every trip.</p>

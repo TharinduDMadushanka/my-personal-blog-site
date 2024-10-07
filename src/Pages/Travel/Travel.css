@@ -26,13 +26,13 @@
   background-color: #fff; /* White color for indicators */
 }
 
-/* Modal custom styles */
-.modal-body img {
-  width: 100%;
-  height: auto;
+.travel-blog img{
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.modal-body {
-  max-height: 80vh;
-  overflow-y: auto;
+.travel-blog .card:hover{
+  transform: scale(1.05);
+  border: 2px solid;
+  border-color: blue;
 }
