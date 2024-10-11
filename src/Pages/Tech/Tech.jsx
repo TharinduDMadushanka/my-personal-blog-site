@@ -55,12 +55,12 @@ const Tech = () => {
             <Modal.Title>{selectedPlace.t_name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h2 style={{ color: "#fff" }}>{selectedPlace.t_name}</h2>
+            {/* <h2 style={{ color: "#fff" }}>{selectedPlace.t_name}</h2> */}
             <img src={selectedPlace.t_img} className="img-fluid mb-4" alt={selectedPlace.t_name} />
             <p>{selectedPlace.t_desc}</p>
 
             {/* Use ReactMarkdown to properly render the markdown-style content */}
-            <ReactMarkdown>{selectedPlace.t_more}</ReactMarkdown>
+            <ReactMarkdown style={{textAlign:"justify"}}>{selectedPlace.t_more}</ReactMarkdown>
         </Modal.Body>
         </Modal>
       )}

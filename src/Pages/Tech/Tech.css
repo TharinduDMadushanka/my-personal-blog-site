@@ -1,7 +1,11 @@
+
+
 .modal-body {
   color: white; /* Set the body text color to white */
   background-color: rgba(57, 55, 55, 0.777); /* Optional: Set a darker background color for contrast */
   padding: 20px; /* Add padding for better spacing */
+  text-align: justify;
+  /* text-align: center; */
 }
 
 .modal-body h2 {
@@ -56,4 +60,8 @@
 .tech-blog .card:hover{
   transform: scale(1.1);
   border: 2px solid hsla(240, 100%, 50%, 0.411);
+}
+
+.tech-blog img{
+  height: 200px;
 }
