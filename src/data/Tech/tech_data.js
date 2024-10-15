@@ -1,5 +1,6 @@
 import javaImg from '../../assets/pages/Tech/data/java.jpg'; // Changed import name for consistency
 import oopImg from '../../assets/pages/Tech/data/oop.png';   // Changed import name for consistency
+import encapsulation from '../../assets/pages/Tech/data/encapsulation.jpg';   
 
 const tech_data = [
   {
@@ -125,7 +126,92 @@ const tech_data = [
       - **protected**: Accessible within the same package or subclasses.
     `,
     t_img: oopImg, // Using corrected variable name for OOP image
+  },
+
+  {
+    t_no: "3",
+    t_name: "Encapsulation in OOP",
+    t_desc: "An in-depth look into the concept of Encapsulation in OOP.",
+    t_more: `
+    ### What is Encapsulation?
+
+    - Encapsulation is one of the four fundamental principles of Object-Oriented Programming (OOP). 
+
+    - It refers to the bundling of data (variables) and methods (functions) that operate on the data into a single unit or class, 
+      while restricting direct access to some of the object's components. 
+
+    - It ensures that the internal representation of an object is hidden from the outside world, allowing controlled access through public methods.
+  
+    ### Key Benefits of Encapsulation:
+
+    - **Data Protection:** By hiding the internal details, encapsulation helps to protect the integrity of the data. External code cannot
+        directly modify or corrupt the internal state.
+
+    - **Controlled Access:** It allows for controlled access to the data through getters and setters, ensuring that invalid or unwanted 
+        values cannot be assigned directly to attributes.
+
+    - **Modularity:** Encapsulation encourages modularity by grouping related fields and methods into a single, cohesive unit. This makes 
+        the code more maintainable and easier to debug.
+
+    - **Flexibility:** It allows changes to the implementation without affecting other parts of the program, as long as the interface 
+        (public methods) remains consistent.
+
+    - **Increased Security:** Sensitive data is hidden from external access, providing better security for the system.
+  
+    ### How Encapsulation Works
+
+    - **Private Fields:** The data (fields or attributes) are declared private, making them inaccessible directly from outside the class.
+
+    - **Public Methods:** Public getter and setter methods are used to access or update the private fields, ensuring that any validation or
+        logic is applied consistently.
+  
+    ### Example of Encapsulation:
+
+    \`\`\`java
+
+    public class BankAccount {
+        // Private fields
+        private double balance;
+        
+        // Constructor
+        public BankAccount(double initialBalance) {
+            balance = initialBalance;
+        }
+  
+        // Public getter method
+        public double getBalance() {
+            return balance;
+        }
+        
+        // Public setter method
+        public void deposit(double amount) {
+            if (amount > 0) {
+                balance += amount;
+            }
+        }
+    }
+    \`\`\`
+
+    - In this example, the \`balance\` is private, and external access is provided through the \`getBalance()\` and \`deposit()\` methods. 
+      This ensures that the balance is only modified in a controlled manner.
+  
+    ### Real-World Example of Encapsulation:
+
+    - A real-world example of encapsulation can be found in a **car's engine**. The internal details of how the engine works are hidden 
+      from the driver. Instead, the driver interacts with the engine via the accelerator and brake pedals, without needing to understand 
+      the complexity of the engine's inner workings.
+  
+    ### Encapsulation in Practice:
+
+    - When developing applications, especially large ones, encapsulation promotes better organization of code, easier debugging, and enhanced
+      collaboration within teams, as each class handles its data internally without exposing unnecessary details to other parts of the system.
+
+      
+    `,
+    t_img: encapsulation, // Replace with the actual path if necessary
   }
+  
+
 ];
 
 export default tech_data;
