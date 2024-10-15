@@ -1,6 +1,7 @@
 import javaImg from '../../assets/pages/Tech/data/java.jpg'; // Changed import name for consistency
 import oopImg from '../../assets/pages/Tech/data/oop.png';   // Changed import name for consistency
 import encapsulation from '../../assets/pages/Tech/data/encapsulation.jpg';   
+import inheritance from '../../assets/pages/Tech/data/inheritance.png';   
 
 const tech_data = [
   {
@@ -206,9 +207,114 @@ const tech_data = [
     - When developing applications, especially large ones, encapsulation promotes better organization of code, easier debugging, and enhanced
       collaboration within teams, as each class handles its data internally without exposing unnecessary details to other parts of the system.
 
-      
+
     `,
     t_img: encapsulation, // Replace with the actual path if necessary
+  },
+
+  {
+    t_no: "4",  
+    t_name: "Inheritance in OOP",
+    t_desc: "Deep dive into Inheritance, a core concept of Object-Oriented Programming (OOP).",
+    t_more: `
+      ### Inheritance in Object-Oriented Programming
+      
+      - Inheritance is one of the fundamental principles of Object-Oriented Programming (OOP). It allows a new class to acquire the properties
+        and behaviors (methods) of an existing class. This promotes reusability, scalability, and hierarchical relationships among classes.
+
+      #### Key Concepts of Inheritance:
+      
+      1. **Superclass (Parent Class)**: This is the class from which other classes inherit. It contains common attributes and methods that can
+           be shared by multiple subclasses.
+      
+      2. **Subclass (Child Class)**: The class that inherits from the superclass. It can extend or modify the inherited properties and methods.
+           The subclass can add new attributes and behaviors or override the inherited ones.
+      
+      3. **extends Keyword**: In languages like Java, the \`extends\` keyword is used to indicate that one class inherits from another.For example:
+         \`\`\`
+
+         class Vehicle {
+           // properties and methods
+         }
+         
+         class Car extends Vehicle {
+           // Car inherits from Vehicle
+         }
+
+         \`\`\`
+
+      #### How Inheritance Works:
+
+      - **Inheritance of Attributes and Methods**: 
+            ~ When a subclass inherits from a superclass, it gets all the non-private attributes and methods from the parent. For instance, 
+              if the superclass defines common methods like \`startEngine()\` or \`stopEngine()\`, the subclass automatically has access to 
+              these methods without needing to rewrite them.
+      
+      - **Code Reusability**:
+            ~ Inheritance allows for better code organization and reusability. Instead of repeating code in every class, you can define it once
+             in the parent class and reuse it in multiple subclasses.
+      
+      - **Method Overriding**: 
+            ~ Subclasses can override methods from the superclass. This means that a subclass can provide its specific implementation of a
+              method that is inherited from the parent class, allowing for specialized behavior. For example, while both \`Car\` and \`Bike\`
+              may inherit a method \`move()\` from \`Vehicle\`, they can each implement \`move()\` differently based on their unique 
+              characteristics.
+      
+      #### Types of Inheritance:
+
+      - **Single Inheritance**: 
+            ~ Involves one class inheriting from another. For example, a \`Car\` class can inherit from a \`Vehicle\` class.
+      
+      - **Multiple Inheritance**: 
+            ~ In some languages (like C++), a class can inherit from more than one class. However, languages like Java only support single 
+              inheritance to avoid ambiguity. Java achieves multiple inheritance through interfaces.
+      
+      #### Real-World Example:
+
+      - Consider a class hierarchy where you have a general \`Animal\` class. Specific animals like \`Dog\` and \`Cat\` inherit from \`Animal\`.
+        They share common traits like \`eat()\` or \`sleep()\` but can also have specialized behaviors like \`bark()\` for dogs or \`meow()\` 
+        for cats.
+
+      \`\`\`
+
+      class Animal {
+        public void eat() {
+          System.out.println("This animal is eating");
+        }
+      }
+      
+      class Dog extends Animal {
+        public void bark() {
+          System.out.println("The dog is barking");
+        }
+      }
+      
+      class Cat extends Animal {
+        public void meow() {
+          System.out.println("The cat is meowing");
+        }
+      }
+
+      \`\`\`
+
+      #### Advantages of Inheritance:
+
+      - **Code Reusability**: Once a behavior is defined in a parent class, it can be reused by all subclasses.
+      - **Reduced Redundancy**: Common attributes or methods only need to be defined once in the parent class.
+      - **Maintainability**: Changes made in the parent class automatically propagate to the subclasses, making the system
+          easier to maintain and update.
+
+      #### Disadvantages of Inheritance:
+      - **Tight Coupling**: Subclasses are tightly coupled with the parent class, meaning changes in the parent class can affect all subclasses.
+      - **Increased Complexity**: Overuse of inheritance can lead to complex class hierarchies, which may become difficult to manage and
+           understand.
+      
+      - In summary, inheritance provides a mechanism to model hierarchical relationships between classes, enabling code reusability and 
+        extensibility in software design. It's a powerful tool but should be used wisely to avoid overly complex systems.
+
+        
+    `,
+    t_img: inheritance,
   }
   
 
