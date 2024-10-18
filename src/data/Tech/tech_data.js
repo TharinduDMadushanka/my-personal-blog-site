@@ -2,6 +2,7 @@ import javaImg from '../../assets/pages/Tech/data/java.jpg'; // Changed import n
 import oopImg from '../../assets/pages/Tech/data/oop.png';   // Changed import name for consistency
 import encapsulation from '../../assets/pages/Tech/data/encapsulation.jpg';   
 import inheritance from '../../assets/pages/Tech/data/inheritance.png';   
+import polymorphism from '../../assets/pages/Tech/data/polymorphism.jpg';   
 
 const tech_data = [
   {
@@ -315,6 +316,168 @@ const tech_data = [
         
     `,
     t_img: inheritance,
+  },
+
+  {
+    t_no: "4",  // Next entry
+    t_name: "Polymorphism in OOP",
+    t_desc: "Exploring the concept of Polymorphism, one of the key pillars of OOP.",
+    t_more: `
+      ### Polymorphism in Object-Oriented Programming
+      
+      - Polymorphism is one of the four fundamental principles of Object-Oriented Programming (OOP). It allows objects to be treated as instances
+        of their parent class, making it possible to call the same method on different objects and achieve different results based on the object's
+        type. Polymorphism enables flexibility and the ability to design systems that are easier to extend and maintain.
+
+      #### Key Concepts of Polymorphism:
+
+      1. # Definition: 
+
+            The term polymorphism is derived from the Greek words "poly" (many) and "morph" (form). In OOP, polymorphism refers to
+            the ability of different classes to respond to the same message (or method call) in different ways.
+      
+      2. # Types of Polymorphism:
+
+         - Compile-time Polymorphism (Method Overloading)**: Achieved when multiple methods have the same name but differ in their parameter 
+           lists (either in the number or type of parameters). The appropriate method is selected at compile-time based on the arguments passed.
+
+         - Run-time Polymorphism (Method Overriding)**: Occurs when a subclass provides a specific implementation of a method that is already 
+           defined in its superclass. The decision of which method to invoke is made at runtime based on the actual object type.
+
+      3. # Method Overloading: 
+
+         - Involves multiple methods with the same name but different parameter lists. For example, in a class, you could have multiple 
+           methods named \`add()\` but with different argument types or counts:
+
+         \`\`\`
+
+         class Calculator {
+           public int add(int a, int b) {
+             return a + b;
+           }
+           
+           public double add(double a, double b) {
+             return a + b;
+           }
+         }
+
+         \`\`\`
+
+         - In the above example, the \`add\` method is overloaded. Depending on the arguments passed, the appropriate method will be called.
+
+      4. # Method Overriding: 
+      
+         - Occurs when a subclass provides its version of a method that is already defined in its parent class.
+
+         - This allows the subclass to offer more specific functionality while still adhering to the method signature. 
+
+         \`\`\`
+
+         class Animal {
+           public void makeSound() {
+             System.out.println("This animal makes a sound");
+           }
+         }
+         
+         class Dog extends Animal {
+           @Override
+           public void makeSound() {
+             System.out.println("The dog barks");
+           }
+         }
+
+         class Cat extends Animal {
+           @Override
+           public void makeSound() {
+             System.out.println("The cat meows");
+           }
+         }
+
+         \`\`\`
+
+         - In this example, the \`makeSound()\` method is overridden by both the \`Dog\` and \`Cat\` classes, each providing a unique
+           implementation.
+
+      5. # Dynamic Binding: 
+      
+         - With polymorphism, the method to be called is determined at runtime (not compile-time). This is achieved through dynamic (or late) 
+           binding, where the object type determines which method implementation to execute. For instance, the same method call \`makeSound()\` 
+           will behave differently depending on whether the object is a \`Dog\` or \`Cat\`.
+
+      #### How Polymorphism Works:
+      
+        # Unified Interface: 
+          - With polymorphism, objects of different types can be treated uniformly based on a shared interface or parent class. For example,
+            both \`Dog\` and \`Cat\` are animals, so you can use an \`Animal\` reference to call methods on both:
+
+        \`\`\`
+
+        Animal myAnimal = new Dog();
+        myAnimal.makeSound();  // Output: The dog barks
+
+        myAnimal = new Cat();
+        myAnimal.makeSound();  // Output: The cat meows
+        \`\`\`
+
+         - Despite the \`myAnimal\` variable being of type \`Animal\`, it is able to call the specific implementations of the \`makeSound\` 
+           method for both \`Dog\` and \`Cat\` due to polymorphism.
+
+      #### Real-World Example:
+
+      - Consider a shape drawing application. You can have different types of shapes like \`Circle\`, \`Rectangle\`, and \`Triangle\`, all 
+        inheriting from a base \`Shape\` class. Each shape has its own \`draw()\` method:
+
+      \`\`\`
+
+      class Shape {
+        public void draw() {
+          System.out.println("Drawing a shape");
+        }
+      }
+      
+      class Circle extends Shape {
+        @Override
+        public void draw() {
+          System.out.println("Drawing a circle");
+        }
+      }
+      
+      class Rectangle extends Shape {
+        @Override
+        public void draw() {
+          System.out.println("Drawing a rectangle");
+        }
+      }
+
+      \`\`\`
+
+      - Even though you call \`draw()\` on an instance of \`Shape\`, the specific type of the object (whether it’s a \`Circle\` or \`Rectangle\`) 
+        determines the actual behavior.
+
+      #### Advantages of Polymorphism:
+
+      - # Flexibility: 
+          - It allows for a more flexible and extensible system since new classes can be added with ease without changing existing code.
+
+      - # Maintainability: 
+          - By using a single method name or interface, you can manage and maintain the code more easily while ensuring it behaves according to
+            the specific object type.
+
+      - # Code Reusability: 
+          - Through method overriding and overloading, polymorphism encourages code reuse by allowing methods with the same name to perform
+            different tasks based on their arguments or object types.
+
+      #### Disadvantages of Polymorphism:
+
+      - Overhead -> Polymorphism can introduce overhead due to dynamic method resolution at runtime.
+
+      - Increased Complexity -> It can lead to more complex code since it's not always immediately clear which method implementation will be 
+                                invoked, especially in deep inheritance hierarchies.
+
+      - Polymorphism provides the ability to write code that is more flexible, reusable, and maintainable. It is a core concept in OOP, 
+        helping to manage complexity in large systems by allowing objects to behave in multiple forms.
+    `,
+    t_img: polymorphism,
   }
   
 
