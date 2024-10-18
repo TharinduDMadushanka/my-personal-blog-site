@@ -3,6 +3,7 @@ import oopImg from '../../assets/pages/Tech/data/oop.png';   // Changed import n
 import encapsulation from '../../assets/pages/Tech/data/encapsulation.jpg';   
 import inheritance from '../../assets/pages/Tech/data/inheritance.png';   
 import polymorphism from '../../assets/pages/Tech/data/polymorphism.jpg';   
+import abstraction from '../../assets/pages/Tech/data/abstraction.jpg';   
 
 const tech_data = [
   {
@@ -319,7 +320,7 @@ const tech_data = [
   },
 
   {
-    t_no: "4",  // Next entry
+    t_no: "5",  // Next entry
     t_name: "Polymorphism in OOP",
     t_desc: "Exploring the concept of Polymorphism, one of the key pillars of OOP.",
     t_more: `
@@ -478,8 +479,162 @@ const tech_data = [
         helping to manage complexity in large systems by allowing objects to behave in multiple forms.
     `,
     t_img: polymorphism,
-  }
+  },
   
+  {
+    t_no: "6",  // Next entry
+    t_name: "Abstraction in OOP",
+    t_desc: "Understanding Abstraction, a key principle of OOP, that simplifies complex systems.",
+    t_more: `
+      ### Abstraction in Object-Oriented Programming (OOP)
+      
+      **Abstraction** is one of the four key pillars of Object-Oriented Programming (OOP). It refers to the concept of hiding the internal 
+        details of a system or object and exposing only the necessary, essential aspects that are relevant to the user. This simplifies the 
+        system and allows developers to focus on what an object does rather than how it does it.
+
+      #### Key Concepts of Abstraction:
+
+      1. Definition: 
+         - Abstraction in OOP is the process of hiding the implementation details and showing only the essential features of an object or 
+           system. For instance, when you use a smartphone, you interact with its apps and functionalities without needing to understand
+           how the underlying hardware or code works.
+      
+      2. Purpose of Abstraction:
+
+         - Simplify complex systems by focusing on the most important details.
+
+         - Reduce the cognitive load for developers and users by only showing the necessary functionalities.
+
+         - Enable easier management of code and reduce complexity in large systems.
+
+      3. Abstraction vs. Encapsulation: 
+         - While both abstraction and encapsulation deal with hiding details, they are distinct concepts. **Abstraction** focuses on hiding the
+           "what" part (what an object does), while **Encapsulation** hides the "how" part (how it is done, i.e., the internal state and data).
+      
+      4. Abstract Classes and Interfaces:
+
+         - Abstract Classes -> These are classes that cannot be instantiated directly. They provide a blueprint for other classes to extend, 
+                               defining abstract methods that must be implemented by subclasses.
+
+         - Interfaces -> An interface is a contract that defines a set of methods without providing their implementation. Any class that
+                         implements an interface must provide concrete implementations for the defined methods.
+
+      5. Real-World Example:
+
+         - Consider a **Vehicle** as an abstract concept. Whether it’s a car, a bike, or a truck, all vehicles share common behaviors like 
+           \`start()\`, \`stop()\`, and \`accelerate()\`, but the actual implementation differs for each type.
+
+         \`\`\`
+
+         abstract class Vehicle {
+           abstract void start();
+           abstract void stop();
+         }
+
+         class Car extends Vehicle {
+           @Override
+           void start() {
+             System.out.println("Car is starting with a key");
+           }
+
+           @Override
+           void stop() {
+             System.out.println("Car is stopping by pressing the brake");
+           }
+         }
+
+         class Bike extends Vehicle {
+           @Override
+           void start() {
+             System.out.println("Bike is starting with a kick");
+           }
+
+           @Override
+           void stop() {
+             System.out.println("Bike is stopping by squeezing the hand brake");
+           }
+         }
+
+         \`\`\`
+
+         - In this example, the **Vehicle** class abstracts the common behaviors of all vehicles, while the **Car** and **Bike** classes 
+           provide their specific implementations.
+
+      6. Interfaces in Abstraction: 
+         - An interface can be used to represent abstraction in the sense that it defines a set of methods that a class must implement,
+           without dictating how the methods should work. For example:
+
+         \`\`\`
+
+         interface RemoteControl {
+           void turnOn();
+           void turnOff();
+         }
+
+         class TV implements RemoteControl {
+           @Override
+           public void turnOn() {
+             System.out.println("Turning on the TV");
+           }
+
+           @Override
+           public void turnOff() {
+             System.out.println("Turning off the TV");
+           }
+         }
+
+         class Fan implements RemoteControl {
+           @Override
+           public void turnOn() {
+             System.out.println("Turning on the Fan");
+           }
+
+           @Override
+           public void turnOff() {
+             System.out.println("Turning off the Fan");
+           }
+         }
+
+         \`\`\`
+
+         - Here, the **RemoteControl** interface abstracts the concept of a remote control, and both **TV** and **Fan** classes implement the 
+           interface with their own specific behavior for turning on and off.
+
+      #### Advantages of Abstraction:
+
+      - Simplicity -> By focusing on the high-level functionality, abstraction helps to simplify complex systems. Users don’t need to 
+                      understand the underlying logic to use the system.
+
+      - Improved Code Organization -> It provides a clear separation between what an object does and how it does it, making the code more
+                                      organized and maintainable.
+
+      - Reusability -> Abstract classes and interfaces can be reused in different parts of a system, enabling code reuse.
+
+      - Reduced Redundancy -> Abstraction helps to eliminate redundant code by allowing shared behaviors to be defined in one place 
+                              (e.g., an abstract class), which can then be reused by subclasses.
+
+      #### Disadvantages of Abstraction:
+
+      - **Increased Complexity in Implementation**: While abstraction simplifies the interface for users, it may add complexity to the design 
+                                                    and implementation of the underlying system.
+
+      - **Performance Overhead**: If not used properly, abstraction can introduce a layer of complexity that might affect performance, 
+                                  especially if there are too many levels of abstraction.
+
+      #### Abstraction in the Real World:
+
+      - ATM Machines : When using an ATM, you interact with its abstract functionalities like withdrawing cash, checking the balance, 
+                          or transferring funds. The complex backend operations (e.g., connecting to banks, validating credentials, etc.) 
+                          are hidden from you.
+
+      - Car Driving : As a driver, you interact with high-level functions like steering, accelerating, or braking. You don’t need to understand
+                      how the engine, fuel injection system, or brakes work at the technical level.
+
+      - Abstraction is a powerful concept that helps developers manage complexity by separating an object's interface from its implementation.
+        It allows you to focus on what an object does rather than how it works, making systems easier to use, maintain, and extend.
+    `,
+    t_img: abstraction, 
+  }
 
 ];
 
